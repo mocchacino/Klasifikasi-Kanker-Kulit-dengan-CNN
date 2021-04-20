@@ -1,0 +1,53 @@
+{% extends "templates/base_sb.html" %}
+
+{% block title %}
+    Melanoma Detection - Upload Image
+{% endblock %}
+
+{% block body %}
+    <!-- <h1>Input Image for Prediction</h1>
+    
+    <form action='{% url "upload_image_prediction" %}' method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Predict">
+    </form> -->
+    
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+    
+          <div class="col-xl-10 col-lg-12 col-md-9">
+    
+            <div class="card o-hidden border-0 shadow-lg my-5">
+              <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                  <div class="col-lg-6 d-none d-lg-block bg-password-image"></div>
+                  <div class="col-lg-6">
+                    <div class="p-5">
+                      <div class="text-center">
+                        <h1 class="h4 text-gray-900 mb-2">Upload Image</h1>
+                        <p class="mb-4">Upload satu atau lebih citra selanjutnya tekan tombol 'Predict' dibawah untuk memprediksi citra yang diupload merupakan citra melanoma atau nevus </p>
+                      </div>
+                      <form class="{% url "upload_image_prediction" %}" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            {% csrf_token %}
+                            {{ form }}
+                        </div>
+                        <input type="submit" class="form-control form-control-user btn btn-primary btn-user btn-block" value="Predict">
+                      </form>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+{% endblock %}

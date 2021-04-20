@@ -1,0 +1,50 @@
+{% extends "templates/base_sb.html" %}
+
+{% block title %}
+    Melanoma Detection - Homepage
+{% endblock %}
+
+{% block body %}
+    
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+    
+          <div class="col-xl-10 col-lg-12 col-md-9">
+    
+            <div class="card o-hidden border-0 shadow-lg my-5">
+              <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row justify-content-center">
+                  <div class="col-lg-8 d-none d-lg-block"></div>
+                  <div class="col-lg-8">
+                    <div class="p-5">
+                      <div class="text-center">
+                        <h1 class="h1 text-gray-900 mb-2">Klasifikasi Kanker Kulit Melanoma dan Nevus Menggunakan Metode CNN</h1>
+                        <hr><hr>
+                        <br>
+                        <p class="mb-4">aplikasi web untuk memprediksi citra yang dimasukkan merupakan citra melanoma atau nevus</p>
+                        <br><br><br>
+                      </div>
+                      <form class="user text-center">
+                        <a href="{% url 'upload_model_prediction' %}" class="btn btn-primary btn-user ">
+                          Selanjutnya
+                        </a>
+                      </form>
+                      <hr>
+                      <div class="text-center">
+                        <p class="small">Wiladhianty Yulianova<br>24010314120014</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+{% endblock %}
